@@ -72,7 +72,7 @@ Vagrant.configure("2") do |config|
   
   config.vm.provision "ansible" do |ansible|
     ansible.verbose = "v"
-    ansible.playbook = "tomcat.yml"
+    ansible.playbook = "provisioning/main.yml"
    ask_sudo_pass = true	
   end 
 end

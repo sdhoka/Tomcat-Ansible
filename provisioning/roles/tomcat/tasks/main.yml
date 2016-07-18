@@ -1,7 +1,4 @@
 ---
-- hosts: all
-  sudo: true
-  tasks:
     - name: add group "tomcat"
       group: name=tomcat
 
