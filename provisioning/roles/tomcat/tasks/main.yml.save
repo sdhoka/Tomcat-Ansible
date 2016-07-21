@@ -42,10 +42,7 @@
       service: name=tomcat state=stopped
 
     - name: Edit security options
-      lineinfile: dest=/opt/apache-tomcat-7.0.61/conf/server.xml regexp="^            unpackWARs=\"" line="            unpackWARs=\"true\" autoDeploy=\"false\">"
-
-    - name: Remove configxml file
-      file: path=/opt/apache-tomcat-7.0.61/.jenkins/config.xml state=absent
+      lineinfile: dest=/opt/apache-tomcat-7.0.61/.jenkins/config.xml regexp="^            unpackWARs="true" autoDeploy="false"" line="  <useSecurity>false</useSecurity>"
 
     - name: Restart the Tomcat server
       service: name=tomcat state=restarted enabled=yes

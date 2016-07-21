@@ -28,6 +28,9 @@ export CATALINA_BASE=/usr/share/tomcat
  
 #TOMCAT_USER is the default user of tomcat
 export TOMCAT_USER=tomcatuser
+
+#Set CATLINA opts for jenkins
+CATALINA_OPTS="-DJENKINS_HOME=/var/lib/jenkins/ -Xmx512m"
  
 #TOMCAT_USAGE is the message if this script is called without any options
 TOMCAT_USAGE="Usage: $0 {\e[00;32mstart\e[00m|\e[00;31mstop\e[00m|\e[00;32mstatus\e[00m|\e[00;31mrestart\e[00m}"
